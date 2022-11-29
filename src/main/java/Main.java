@@ -1,7 +1,9 @@
-import graph.Dfs;
+import algorithm.base.StdOut;
+import leetcode.Dfs;
 
 /**
- * TODO 类描述
+ * algorithm代码参考
+ * https://algs4.cs.princeton.edu/code/
  *
  * @author LvYingBin
  * @version 1.0
@@ -9,7 +11,17 @@ import graph.Dfs;
  **/
 public class Main {
     public static void main(String args[]) {
-        int[][] array = {{0, 0, 0}, {0, 0, 0}};
-        Dfs.floodFill(array, 0, 0, 0);
+        int[][] array = {{0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0},
+                {0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0},
+                {0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0},
+                {0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0}};
+        StdOut.println(array);
+        Dfs dfs = new Dfs();
+        int res = dfs.maxAreaOfIsland(array);
+        System.out.println(res);
     }
 }
