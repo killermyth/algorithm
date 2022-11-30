@@ -1,5 +1,8 @@
 import algorithm.base.StdOut;
+import leetcode.Bfs;
 import leetcode.Dfs;
+
+import java.util.Arrays;
 
 /**
  * algorithm代码参考
@@ -11,17 +14,11 @@ import leetcode.Dfs;
  **/
 public class Main {
     public static void main(String args[]) {
-        int[][] array = {{0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0},
-                {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0},
-                {0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0},
-                {0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0},
-                {0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0},
-                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0},
-                {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0},
-                {0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0}};
-        StdOut.println(array);
-        Dfs dfs = new Dfs();
-        int res = dfs.maxAreaOfIsland(array);
-        System.out.println(res);
+        int[][] array = {{2, 1, 1},
+                {1, 1, 0},
+                {0, 1, 1}};
+        Bfs bfs = new Bfs();
+        int res = bfs.orangesRotting(array);
+        StdOut.println(res);
     }
 }
