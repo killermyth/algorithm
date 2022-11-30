@@ -1,8 +1,6 @@
-import algorithm.base.StdOut;
-import leetcode.Bfs;
-import leetcode.Dfs;
-
-import java.util.Arrays;
+import leetcode.LinkedList;
+import util.LinkedListUtils;
+import util.ListNode;
 
 /**
  * algorithm代码参考
@@ -14,11 +12,10 @@ import java.util.Arrays;
  **/
 public class Main {
     public static void main(String args[]) {
-        int[][] array = {{2, 1, 1},
-                {1, 1, 0},
-                {0, 1, 1}};
-        Bfs bfs = new Bfs();
-        int res = bfs.orangesRotting(array);
-        StdOut.println(res);
+        LinkedList linkedList = new LinkedList();
+        int[] array = {1, 2, 3, 4, 5};
+        ListNode node = LinkedListUtils.generate(array);
+        ListNode res = linkedList.reverseList(node);
+        LinkedListUtils.print(res);
     }
 }
